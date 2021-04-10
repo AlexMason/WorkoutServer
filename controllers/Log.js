@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const { LogModel } = require("../models");
 const validateJWT = require("../middleware/validate-jwt");
-//description, definition, result, owner_id
 
 router.post("/", validateJWT, async (req, res) => {
   const { description, definition, result } = req.body;
